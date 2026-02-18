@@ -1,8 +1,3 @@
-"""
-Tkinter GUI app for the Weather Data Pipeline.
-
-This lives in a separate directory (gui_app/) but reuses the pipeline logic from ../src/.
-"""
 
 from __future__ import annotations
 
@@ -25,6 +20,7 @@ GUI_DIR = Path(__file__).resolve().parent.parent
 PIPELINE_ROOT = GUI_DIR.parent  # WEATHER_SCRAPPING_TOOL/
 sys.path.insert(0, str(PIPELINE_ROOT))
 
+
 from src.scraper import WeatherScraper  # noqa: E402
 from src.parser import WeatherParser  # noqa: E402
 from src.storage import WeatherStorage  # noqa: E402
@@ -32,7 +28,7 @@ from src.storage import WeatherStorage  # noqa: E402
 
 DEFAULT_LOCATIONS_TEXT = "\n".join(
     [
-        "Nabuti, Mukono, UG",
+        "Bugembe, Jinja, UG",
         "Bugujju, Mukono, UG",
         "Seeta, Mukono, UG",
         "Namilyango, Mukono, UG",

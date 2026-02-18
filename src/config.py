@@ -26,7 +26,7 @@ OUTPUT_FILENAME = os.getenv("OUTPUT_FILENAME", "weather_data.csv")
 
 # Default locations to scrape
 DEFAULT_LOCATIONS = [
-    {"name": "Nabutti, Mukono, UG"},
+    {"name": "Kirowoza, Mukono, UG"},
     {"name": "Bugujju, Mukono, UG"},
     {"name": "Seeta, Mukono, UG"},
     {"name": "Namilyango, Mukono, UG"},
