@@ -21,6 +21,12 @@ PIPELINE_ROOT = GUI_DIR.parent  # WEATHER_SCRAPPING_TOOL/
 sys.path.insert(0, str(PIPELINE_ROOT))
 
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+if parent_dir not in sys.path:
+    sys.path.append(parent_dir)
+
+
 from src.scraper import WeatherScraper  # noqa: E402
 from src.parser import WeatherParser  # noqa: E402
 from src.storage import WeatherStorage  # noqa: E402
@@ -28,11 +34,12 @@ from src.storage import WeatherStorage  # noqa: E402
 
 DEFAULT_LOCATIONS_TEXT = "\n".join(
     [
-        "Bugembe, Jinja, UG",
+        "Kyaliwajjala, Kampala, UG",
         "Bugujju, Mukono, UG",
         "Seeta, Mukono, UG",
         "Namilyango, Mukono, UG",
         "Kyetume, Mukono, UG",
+        "Nakasero, Kampala, UG"
     ]
 )
 
